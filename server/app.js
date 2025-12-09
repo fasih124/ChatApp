@@ -4,6 +4,8 @@ import cors from "cors";
 import { closeDB, connectDB } from "./config/db.js";
 
 import authRoutes from "./routes/auth-route.js";
+import conversationRoutes from "./routes/conversation-route.js";
+import userRoutes from "./routes/user-route.js";
 
 dotenv.config();
 
@@ -18,7 +20,8 @@ await connectDB(); // await closeDB();
 
 // route middleware
 app.use("/api/auth", authRoutes);
-app.use("/api/user", authRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/conversation", conversationRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
