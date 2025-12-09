@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import { closeDB, connectDB } from "./config/db.js";
 
 import authroutes from "./routes/auth-route.js";
 
@@ -11,6 +12,9 @@ const app = express();
 // middleware
 app.use(cors());
 app.use(express.json());
+
+// connect DB
+await connectDB(); // await closeDB();
 
 // route middleware
 app.use("/", authroutes);
