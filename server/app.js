@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { closeDB, connectDB } from "./config/db.js";
 
-import authroutes from "./routes/auth-route.js";
+import authRoutes from "./routes/auth-route.js";
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 await connectDB(); // await closeDB();
 
 // route middleware
-app.use("/", authroutes);
+app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
