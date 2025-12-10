@@ -32,6 +32,12 @@ export const createConversation = async (req, res) => {
       "-password"
     );
 
+    const member1 = global.onlineUsers.get(req.user._id.toString());
+    const member2 = global.onlineUsers.get(req.body.userId.toString());
+
+    if (member1) io.to(member1).emit("new-conversation", conversation);
+    if (member2) io.to(member2).emit("new-conversation", conversation);
+
     res.status(201).json(fullConv);
   } catch (error) {
     console.error("Error creating conversation:", error);
@@ -114,6 +120,9 @@ export const addMember = async (req, res) => {
       { $addToSet: { members: userId } },
       { new: true }
     ).populate("members", "-password");
+
+    const socketId = global.onlineUsers.get(userId);
+    if (socketId) io.to(socketId).emit("added-to-group", convo);
 
     res.json(updated);
   } catch (error) {

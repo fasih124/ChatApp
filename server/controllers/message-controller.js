@@ -34,6 +34,15 @@ export const sendMessage = async (req, res) => {
       "-password"
     );
 
+    const receiverSocket = global.onlineUsers.get(receiverId);
+
+    if (receiverSocket) {
+      io.to(receiverSocket).emit("receive-message", {
+        conversationId,
+        message,
+      });
+    }
+
     res.status(201).json(fullMessage);
   } catch (error) {
     console.error("Error sending message:", error);
@@ -67,6 +76,8 @@ export const markAsSeen = async (req, res) => {
       },
       { $push: { seenBy: req.user._id } }
     );
+
+    io.emit("seen-update", { conversationId });
 
     res.json({ message: "Messages marked as seen" });
   } catch (error) {
