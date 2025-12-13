@@ -4,7 +4,6 @@ import ProtectedRoute from "./ProtectedRoute";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Home from "../Pages/Home";
-import Chat from "../Pages/Chat";
 import NotFound from "../Pages/NotFound";
 
 const router = createBrowserRouter([
@@ -15,17 +14,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute>
-        <Home />
-      </ProtectedRoute>
-    ),
-  },
-  {
-    path: "/chat/:chatId",
-    element: (
-      <ProtectedRoute>
-        <Chat />
-      </ProtectedRoute>
+      // <ProtectedRoute>
+      <Home />
+      // </ProtectedRoute>
     ),
   },
   // Catch-all
