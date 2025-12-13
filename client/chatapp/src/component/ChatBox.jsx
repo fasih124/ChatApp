@@ -1,3 +1,3 @@
 export default function ChatBox() {
-  return <div className="bg-yellow-500 row-span-3"></div>;
+  return <div className="bg-white row-span-3"></div>;
 }
