@@ -6,7 +6,7 @@ import {
   getMessages,
   markAsSeen,
   deleteMessage,
-} from "../controllers/messageController.js";
+} from "../controllers/message-controller.js";
 
 const router = express.Router();
 

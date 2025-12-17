@@ -14,9 +14,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      // <ProtectedRoute>
-      <Home />
-      // </ProtectedRoute>
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
     ),
   },
   // Catch-all
