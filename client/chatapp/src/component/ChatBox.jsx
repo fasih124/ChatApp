@@ -1,14 +1,6 @@
-//  {
-//       id: "1",
-//       AvatarUrl: "/./././",
-//       Name: "john Andreson",
-//       LastMessage: "have a lot of fun. see Later.....",
-//       Time: "12:15",
-//     },
-
 import { FaPlus, FaArrowRight } from "react-icons/fa6";
 export default function ChatBox() {
-  let isSelected = true;
+  let isSelected = false;
   return isSelected ? (
     <div className="bg-white row-span-3 flex flex-col justify-between p-5">
       {/* <p className="text-3xl font-semibold"></p> */}

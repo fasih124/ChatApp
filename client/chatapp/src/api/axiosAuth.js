@@ -1,5 +1,5 @@
 import api from "./axios";
-import store from "../store/store";
+import { store } from "../store/store";
 
 api.interceptors.request.use(
   (config) => {
