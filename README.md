@@ -147,9 +147,36 @@ npm run dev
 
 ---
 
-## 📸 Screens (Optional)
+## 📸 Screens
 
-*Add screenshots or GIFs here to showcase UI*
+<table>
+<tr>
+<td>
+  
+### 🔐 Login Page
+![Login Page](ScreenShots/Login-Page.PNG)
+
+</td>
+<td>
+  
+### 🙍‍♂️ Signup Mode
+![Signup Page](ScreenShots/Signin-Page.PNG)
+
+</td>
+<td>
+  
+### 💬 Chat Page
+![Chat Page](ScreenShots/Chat-Page.PNG)
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
 
 ---
 
