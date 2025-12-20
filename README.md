@@ -204,11 +204,3 @@ This project is licensed under the MIT License.
 
 
 ---
-
-If you want, I can:
-
-* Simplify this README for **FYP submission**
-* Rewrite it for **resume / portfolio**
-* Add **badges**, **screenshots**, or **deployment instructions**
-
-Just tell me 👍
